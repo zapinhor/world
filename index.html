@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu mundo</title>
+    <style>
+        body{
+            background-color: rgb(133, 8, 8);
+        }
+
+        .painel{
+            width: 700px;
+            height: 500px;
+            background-color: black;
+            margin: auto;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            
+            justify-content: center;
+        }
+
+        #imagem-fruta {
+            margin-top: 20px;
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="painel">
+        <h1>Meu mundo em diferentes resoluções</h1>
+
+    <label for="frutas">Escolha uma resolução:</label>
+    <select id="frutas" name="frutas" onchange="mostrarImagem()">
+        <option value="">--Selecione uma resolução--</option>
+        <option value="480p">480p</option>
+        <option value="720p">720p</option>
+        <option value="1080p">1080p</option>
+        <option value="2160p">2160p</option>
+    </select>
+    <center>
+    <img id="imagem-fruta" src="" alt="Imagem da fruta" style="display:none;"/>
+    </center>    
+    </div>
+
+    <script>
+        function mostrarImagem() {
+            var select = document.getElementById("frutas");
+            var imagem = document.getElementById("imagem-fruta");
+            var frutaSelecionada = select.value;
+
+            switch(frutaSelecionada) {
+                case "480p":
+                    imagem.src = "https://media.discordapp.net/attachments/1247236478862495829/1247236502283620473/c156b4270aea292b9b335dd463ea17eb-icone-de-planeta-terra-icone-de-terra.png?ex=665f4b02&is=665df982&hm=51930cf32be0e060ad97a11158eaea24774ebb88ac1b467e19be3a500c16b820&=&format=webp&quality=lossless"; // Substitua pelo URL real da imagem
+                    imagem.style.display = "block";
+                    break;
+                case "720p":
+                    imagem.src = "https://media.discordapp.net/attachments/1247236478862495829/1247237964711465001/pngegg.png?ex=665f4c5f&is=665dfadf&hm=ad5b875fb1963af38e2f63adc85b99145396edc67932c98d0a2950eae60e79a3&=&format=webp&quality=lossless&width=339&height=350"; // Substitua pelo URL real da imagem
+                    imagem.style.display = "block";
+                    break;
+                case "1080p":
+                    imagem.src = "https://media.discordapp.net/attachments/1247236478862495829/1247238137579700305/Terra.png?ex=665f4c88&is=665dfb08&hm=9acefc811783fc33bc501989e0f788c27a7b8fce65ff0e8b18087d5d0bc28a50&=&format=webp&quality=lossless&width=350&height=350"; // Substitua pelo URL real da imagem
+                    imagem.style.display = "block";
+                    break;
+                case "2160p":
+                    imagem.src = "https://media.discordapp.net/attachments/1247236478862495829/1247238341922127962/Imagem_do_WhatsApp_de_2024-05-24_as_16.40.22_b59ce006.jpg?ex=665f4cb9&is=665dfb39&hm=f65a1ab93010e1a1f64c83c89a2028163e5e673a6e6d9934d7d2936478064520&=&format=webp&width=529&height=702"; // Substitua pelo URL real da imagem
+                    imagem.style.display = "block";
+                    break;
+                default:
+                    imagem.style.display = "none";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
